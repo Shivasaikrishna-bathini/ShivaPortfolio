@@ -31,6 +31,61 @@ export default function Hero() {
             ease: "easeInOut",
           }}
         />
+        
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-primary/30 rounded-full"
+            initial={{
+              x: Math.random() * window.innerWidth,
+              y: Math.random() * window.innerHeight,
+            }}
+            animate={{
+              x: [
+                Math.random() * window.innerWidth,
+                Math.random() * window.innerWidth,
+                Math.random() * window.innerWidth,
+              ],
+              y: [
+                Math.random() * window.innerHeight,
+                Math.random() * window.innerHeight,
+                Math.random() * window.innerHeight,
+              ],
+              scale: [1, 1.5, 1],
+              opacity: [0.2, 0.5, 0.2],
+            }}
+            transition={{
+              duration: 10 + Math.random() * 10,
+              repeat: Infinity,
+              ease: "linear",
+              delay: Math.random() * 5,
+            }}
+          />
+        ))}
+        
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={`shape-${i}`}
+            className="absolute border-2 border-primary/20"
+            style={{
+              width: 100 + Math.random() * 100,
+              height: 100 + Math.random() * 100,
+              borderRadius: i % 2 === 0 ? '50%' : '10px',
+              left: `${Math.random() * 80}%`,
+              top: `${Math.random() * 80}%`,
+            }}
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.2, 1],
+              opacity: [0.1, 0.3, 0.1],
+            }}
+            transition={{
+              duration: 20 + i * 5,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          />
+        ))}
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-32 text-center">

@@ -142,20 +142,17 @@ export default function Navigation() {
         </AnimatePresence>
 
         <Dialog open={resumeOpen} onOpenChange={setResumeOpen}>
-          <DialogContent className="max-w-5xl h-[95vh] p-0 bg-card">
-            <DialogHeader className="px-6 py-5 bg-primary text-primary-foreground">
+          <DialogContent className="max-w-5xl h-[95vh] p-0 flex flex-col">
+            <DialogHeader className="px-6 py-3 border-b flex-shrink-0">
               <div className="flex items-center justify-between">
-                <DialogTitle className="flex items-center gap-3 text-xl">
-                  <div className="p-2 bg-primary-foreground/10 rounded-lg">
-                    <FileText className="h-6 w-6" />
-                  </div>
-                  Resume - Shivasai Krishna Goud Bathini
+                <DialogTitle className="flex items-center gap-2 text-lg font-semibold">
+                  <FileText className="h-5 w-5" />
+                  Resume
                 </DialogTitle>
                 <Button
-                  variant="secondary"
+                  variant="ghost"
                   size="sm"
                   asChild
-                  className="bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground border-0"
                   data-testid="button-download-resume"
                 >
                   <a
@@ -168,10 +165,10 @@ export default function Navigation() {
                 </Button>
               </div>
             </DialogHeader>
-            <div className="flex-1 overflow-auto bg-muted/30">
+            <div className="flex-1 overflow-hidden">
               <iframe
                 src={resumePdf}
-                className="w-full h-full"
+                className="w-full h-full border-0"
                 title="Resume PDF"
               />
             </div>
