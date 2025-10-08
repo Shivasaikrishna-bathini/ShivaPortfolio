@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedText from "./AnimatedText";
-import { Player } from "@lottiefiles/react-lottie-player";
 
 export default function Hero() {
   return (
@@ -32,19 +31,6 @@ export default function Hero() {
             ease: "easeInOut",
           }}
         />
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.6, scale: 1 }}
-          transition={{ duration: 1.2 }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-        >
-          <Player
-            autoplay
-            loop
-            src="/attached_assets/Artificial Intelligence Chatbot_1759926274950.lottie"
-            style={{ height: "400px", width: "400px" }}
-          />
-        </motion.div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-32 text-center">
