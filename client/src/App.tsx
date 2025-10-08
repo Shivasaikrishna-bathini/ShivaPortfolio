@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import CustomCursor from "@/components/CustomCursor";
+import SparkEffect from "@/components/SparkEffect";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/not-found";
 
@@ -23,6 +24,7 @@ function App() {
       <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <CustomCursor />
+          <SparkEffect />
           <Toaster />
           <Router />
         </TooltipProvider>
