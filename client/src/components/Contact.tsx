@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Card } from "@/components/ui/card";
-import { Mail, Linkedin, Github, MapPin, Phone } from "lucide-react";
+import { Mail, Linkedin, Github, MapPin } from "lucide-react";
 
 const contactInfo = [
   {
@@ -10,12 +10,6 @@ const contactInfo = [
     label: "Email",
     value: "shbathin@my.bridgeport.edu",
     href: "mailto:shbathin@my.bridgeport.edu"
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "913-203-5323",
-    href: "tel:913-203-5323"
   },
   {
     icon: MapPin,

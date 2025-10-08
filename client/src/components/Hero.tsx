@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedText from "./AnimatedText";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 export default function Hero() {
   return (
@@ -31,6 +32,32 @@ export default function Hero() {
             ease: "easeInOut",
           }}
         />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 0.4, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="absolute top-10 right-10 hidden lg:block"
+        >
+          <Player
+            autoplay
+            loop
+            src="https://lottie.host/c4663d47-69e6-4d41-9a2b-8c8c5c3f0e3f/dQZkOv8vDp.json"
+            style={{ height: "200px", width: "200px" }}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 0.4, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="absolute bottom-20 left-10 hidden lg:block"
+        >
+          <Player
+            autoplay
+            loop
+            src="https://lottie.host/embed/5b01e0cc-e3ed-4ab0-814a-1d8b4e0e65e6/m1o7ISDVx5.json"
+            style={{ height: "180px", width: "180px" }}
+          />
+        </motion.div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-32 text-center">

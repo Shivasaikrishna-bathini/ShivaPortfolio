@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Code, Cloud } from "lucide-react";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const stats = [
   { label: "Years Experience", value: "3+", icon: Sparkles },
@@ -21,7 +22,20 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-20 md:py-32" ref={ref}>
+    <section id="about" className="py-20 md:py-32 relative" ref={ref}>
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={isInView ? { opacity: 0.3, x: 0 } : {}}
+        transition={{ duration: 1 }}
+        className="absolute top-0 right-0 hidden lg:block"
+      >
+        <Player
+          autoplay
+          loop
+          src="https://lottie.host/77c3e1be-e99e-41d2-8d5e-7f4c6e94c8fa/FvhKH3s3uK.json"
+          style={{ height: "250px", width: "250px" }}
+        />
+      </motion.div>
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
