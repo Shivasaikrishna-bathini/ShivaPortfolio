@@ -2,8 +2,41 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedText from "./AnimatedText";
+import { useMemo } from "react";
 
 export default function Hero() {
+  const particles = useMemo(() => {
+    return [...Array(20)].map((_, i) => ({
+      id: i,
+      initialX: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
+      initialY: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
+      animateX: [
+        Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
+        Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
+        Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
+      ],
+      animateY: [
+        Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
+        Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
+        Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
+      ],
+      duration: 10 + Math.random() * 10,
+      delay: Math.random() * 5,
+    }));
+  }, []);
+
+  const shapes = useMemo(() => {
+    return [...Array(5)].map((_, i) => ({
+      id: i,
+      width: 100 + Math.random() * 100,
+      height: 100 + Math.random() * 100,
+      borderRadius: i % 2 === 0 ? '50%' : '10px',
+      left: `${Math.random() * 80}%`,
+      top: `${Math.random() * 80}%`,
+      duration: 20 + i * 5,
+    }));
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 -z-10">
@@ -32,47 +65,39 @@ export default function Hero() {
           }}
         />
         
-        {[...Array(20)].map((_, i) => (
+        {particles.map((particle) => (
           <motion.div
-            key={i}
+            key={particle.id}
             className="absolute w-2 h-2 bg-primary/30 rounded-full"
             initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: particle.initialX,
+              y: particle.initialY,
             }}
             animate={{
-              x: [
-                Math.random() * window.innerWidth,
-                Math.random() * window.innerWidth,
-                Math.random() * window.innerWidth,
-              ],
-              y: [
-                Math.random() * window.innerHeight,
-                Math.random() * window.innerHeight,
-                Math.random() * window.innerHeight,
-              ],
+              x: particle.animateX,
+              y: particle.animateY,
               scale: [1, 1.5, 1],
               opacity: [0.2, 0.5, 0.2],
             }}
             transition={{
-              duration: 10 + Math.random() * 10,
+              duration: particle.duration,
               repeat: Infinity,
               ease: "linear",
-              delay: Math.random() * 5,
+              delay: particle.delay,
             }}
           />
         ))}
         
-        {[...Array(5)].map((_, i) => (
+        {shapes.map((shape) => (
           <motion.div
-            key={`shape-${i}`}
+            key={shape.id}
             className="absolute border-2 border-primary/20"
             style={{
-              width: 100 + Math.random() * 100,
-              height: 100 + Math.random() * 100,
-              borderRadius: i % 2 === 0 ? '50%' : '10px',
-              left: `${Math.random() * 80}%`,
-              top: `${Math.random() * 80}%`,
+              width: shape.width,
+              height: shape.height,
+              borderRadius: shape.borderRadius,
+              left: shape.left,
+              top: shape.top,
             }}
             animate={{
               rotate: [0, 360],
@@ -80,7 +105,7 @@ export default function Hero() {
               opacity: [0.1, 0.3, 0.1],
             }}
             transition={{
-              duration: 20 + i * 5,
+              duration: shape.duration,
               repeat: Infinity,
               ease: "linear",
             }}

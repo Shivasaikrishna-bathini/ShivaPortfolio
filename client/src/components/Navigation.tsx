@@ -166,11 +166,27 @@ export default function Navigation() {
               </div>
             </DialogHeader>
             <div className="flex-1 overflow-hidden">
-              <iframe
-                src={resumePdf}
-                className="w-full h-full border-0"
+              <object
+                data={resumePdf}
+                type="application/pdf"
+                className="w-full h-full"
                 title="Resume PDF"
-              />
+              >
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-center">
+                    <p className="mb-4">Your browser cannot display the PDF.</p>
+                    <Button asChild data-testid="button-fallback-download-resume">
+                      <a
+                        href={resumePdf}
+                        download="Shivasai_Krishna_Resume.pdf"
+                      >
+                        <Download className="h-4 w-4 mr-2" />
+                        Download PDF
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </object>
             </div>
           </DialogContent>
         </Dialog>
