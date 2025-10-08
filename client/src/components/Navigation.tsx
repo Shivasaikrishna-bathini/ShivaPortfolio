@@ -9,6 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import resumePdf from "@assets/Shivasai_Krishna_Resume.pdf";
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -65,16 +66,13 @@ export default function Navigation() {
                 {item.name}
               </a>
             ))}
-            <Button
-              variant="ghost"
-              size="sm"
+            <button
               onClick={() => setResumeOpen(true)}
-              className="text-muted-foreground hover:text-foreground hover-elevate"
+              className="text-muted-foreground hover:text-foreground transition-colors"
               data-testid="button-resume"
             >
-              <FileText className="h-4 w-4 mr-2" />
               Resume
-            </Button>
+            </button>
           </div>
 
           <div className="flex items-center gap-2">
@@ -161,7 +159,7 @@ export default function Navigation() {
                   data-testid="button-download-resume"
                 >
                   <a
-                    href="/resume/Shivasai_Krishna_Resume.pdf"
+                    href={resumePdf}
                     download="Shivasai_Krishna_Resume.pdf"
                   >
                     <Download className="h-4 w-4 mr-2" />
@@ -172,7 +170,7 @@ export default function Navigation() {
             </DialogHeader>
             <div className="flex-1 overflow-auto bg-muted/30">
               <iframe
-                src="/resume/Shivasai_Krishna_Resume.pdf"
+                src={resumePdf}
                 className="w-full h-full"
                 title="Resume PDF"
               />
