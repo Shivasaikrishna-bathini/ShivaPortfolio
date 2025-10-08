@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Brain, Cloud, Code } from "lucide-react";
-import { Player } from "@lottiefiles/react-lottie-player";
 
 const skillCategories = [
   {
@@ -42,20 +41,7 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="skills" className="py-20 md:py-32 relative" ref={ref}>
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={isInView ? { opacity: 0.3, x: 0 } : {}}
-        transition={{ duration: 1 }}
-        className="absolute bottom-10 left-0 hidden lg:block"
-      >
-        <Player
-          autoplay
-          loop
-          src="https://lottie.host/b2c0e9e7-b784-48c6-88e6-c5e5c8e4c0c0/8h1FwZLmSo.json"
-          style={{ height: "200px", width: "200px" }}
-        />
-      </motion.div>
+    <section id="skills" className="py-20 md:py-32" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

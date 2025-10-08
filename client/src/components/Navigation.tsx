@@ -66,11 +66,13 @@ export default function Navigation() {
               </a>
             ))}
             <Button
-              variant="default"
+              variant="ghost"
               size="sm"
               onClick={() => setResumeOpen(true)}
+              className="text-muted-foreground hover:text-foreground hover-elevate"
               data-testid="button-resume"
             >
+              <FileText className="h-4 w-4 mr-2" />
               Resume
             </Button>
           </div>
@@ -142,21 +144,24 @@ export default function Navigation() {
         </AnimatePresence>
 
         <Dialog open={resumeOpen} onOpenChange={setResumeOpen}>
-          <DialogContent className="max-w-4xl h-[90vh] p-0">
-            <DialogHeader className="px-6 py-4 border-b">
+          <DialogContent className="max-w-5xl h-[95vh] p-0 bg-card">
+            <DialogHeader className="px-6 py-5 bg-primary text-primary-foreground">
               <div className="flex items-center justify-between">
-                <DialogTitle className="flex items-center gap-2">
-                  <FileText className="h-5 w-5 text-primary" />
+                <DialogTitle className="flex items-center gap-3 text-xl">
+                  <div className="p-2 bg-primary-foreground/10 rounded-lg">
+                    <FileText className="h-6 w-6" />
+                  </div>
                   Resume - Shivasai Krishna Goud Bathini
                 </DialogTitle>
                 <Button
-                  variant="outline"
+                  variant="secondary"
                   size="sm"
                   asChild
+                  className="bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground border-0"
                   data-testid="button-download-resume"
                 >
                   <a
-                    href="/attached_assets/Shiva_AI Engineer _1759900689431.pdf"
+                    href="/resume/Shivasai_Krishna_Resume.pdf"
                     download="Shivasai_Krishna_Resume.pdf"
                   >
                     <Download className="h-4 w-4 mr-2" />
@@ -165,10 +170,10 @@ export default function Navigation() {
                 </Button>
               </div>
             </DialogHeader>
-            <div className="flex-1 overflow-auto p-6">
+            <div className="flex-1 overflow-auto bg-muted/30">
               <iframe
-                src="/attached_assets/Shiva_AI Engineer _1759900689431.pdf"
-                className="w-full h-full rounded-md border"
+                src="/resume/Shivasai_Krishna_Resume.pdf"
+                className="w-full h-full"
                 title="Resume PDF"
               />
             </div>

@@ -34,54 +34,15 @@ export default function Hero() {
         />
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.5, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute top-10 right-10 hidden lg:block"
+          animate={{ opacity: 0.6, scale: 1 }}
+          transition={{ duration: 1.2 }}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         >
           <Player
             autoplay
             loop
-            src="https://lottie.host/c4663d47-69e6-4d41-9a2b-8c8c5c3f0e3f/dQZkOv8vDp.json"
-            style={{ height: "250px", width: "250px" }}
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.5, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="absolute bottom-20 left-10 hidden lg:block"
-        >
-          <Player
-            autoplay
-            loop
-            src="https://lottie.host/embed/5b01e0cc-e3ed-4ab0-814a-1d8b4e0e65e6/m1o7ISDVx5.json"
-            style={{ height: "220px", width: "220px" }}
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 0.4, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.4 }}
-          className="absolute top-1/2 left-1/4 hidden xl:block"
-        >
-          <Player
-            autoplay
-            loop
-            src="https://lottie.host/b16d8bd9-7d77-4d34-90c9-c5e1e0f9a0e1/3Q7Z8jh0hj.json"
-            style={{ height: "150px", width: "150px" }}
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 0.4, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.6 }}
-          className="absolute top-1/3 right-1/4 hidden xl:block"
-        >
-          <Player
-            autoplay
-            loop
-            src="https://lottie.host/embed/a1e8c6df-8d94-4e67-8f6e-bc99e8e9f0a0/nMmvNQqBXc.json"
-            style={{ height: "160px", width: "160px" }}
+            src="/attached_assets/Artificial Intelligence Chatbot_1759926274950.lottie"
+            style={{ height: "400px", width: "400px" }}
           />
         </motion.div>
       </div>
