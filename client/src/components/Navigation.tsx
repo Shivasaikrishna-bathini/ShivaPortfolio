@@ -47,7 +47,7 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             data-testid="link-home"
           >
-            <div className="text-3xl font-bold italic bg-gradient-to-br from-primary via-accent to-primary bg-clip-text text-transparent hover:opacity-80 transition-opacity" style={{ fontFamily: "'Brush Script MT', cursive" }}>
+            <div className="text-3xl font-bold bg-gradient-to-br from-primary via-accent to-primary bg-clip-text text-transparent hover:opacity-80 transition-opacity" style={{ fontFamily: "'Brush Script MT', cursive", fontStyle: 'italic' }}>
               SK
             </div>
           </motion.a>
