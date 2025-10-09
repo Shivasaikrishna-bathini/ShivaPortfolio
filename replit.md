@@ -28,8 +28,10 @@ Preferred communication style: Simple, everyday language.
 
 **Animation & Interactivity**
 - **Framer Motion** for declarative animations, scroll-triggered effects, and page transitions
+- **3D Perspective Cards**: Project cards feature mouse-tracking 3D tilt effects with dynamic rotateX/rotateY transforms
+- **Innovative Hover Animations**: Cards scale, show gradient overlays, sparkle effects with rotation, and staggered content reveals
 - Custom cursor implementation with blend modes and hover states
-- **Lottie** animations for hero section visual elements
+- Spark and glow particle animations across the page
 - Intersection Observer patterns (via Framer Motion's `useInView`) for scroll-based animations
 
 **State Management**
@@ -63,11 +65,9 @@ Preferred communication style: Simple, everyday language.
 - Responsive type scale from base to 6xl with custom tracking
 
 **Color System**
-- Dark mode primary palette with deep charcoal backgrounds (HSL: 240 6% 8-16%)
-- Vibrant blue primary brand color (220 90% 60%) representing AI/tech
-- Purple accent color (280 85% 65%) for highlights and CTAs
-- Teal green for success/tech indicators (160 75% 55%)
-- CSS custom properties for theme switching
+- **Dark Mode**: Deep navy/almost black background (#000814), dark navy blue cards (#1A2238), medium blue-gray primary (#4A5C7A), slate gray accents (#8B9BB4)
+- **Light Mode**: White to blue diagonal gradient background (135deg from pure white to light blue), vibrant blue primary (218 80% 50%), bright blue accents (214 90% 60%)
+- CSS custom properties for theme switching with automatic border computation
 
 **Layout Patterns**
 - Maximum container width of 6-7xl (1280-1536px)
