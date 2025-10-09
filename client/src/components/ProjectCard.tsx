@@ -10,6 +10,7 @@ interface ProjectCardProps {
   description: string[];
   tags: string[];
   index: number;
+  link?: string; // Optional link to project GitHub/demo
 }
 
 export default function ProjectCard({
@@ -18,6 +19,7 @@ export default function ProjectCard({
   description,
   tags,
   index,
+  link,
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -87,15 +89,24 @@ export default function ProjectCard({
             transition={{ duration: 0.3 }}
           />
 
-          {/* Icon section */}
+          {/* Icon section - clickable link if provided */}
           <motion.div
-            className="absolute top-6 left-6 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center"
+            className={`absolute top-6 left-6 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center ${link ? 'cursor-pointer hover-elevate' : ''}`}
             animate={{
               scale: isHovered ? 0.8 : 1,
               x: isHovered ? -10 : 0,
               y: isHovered ? -10 : 0,
             }}
             transition={{ duration: 0.3 }}
+            onClick={(e) => {
+              if (link) {
+                e.stopPropagation();
+                window.open(link, '_blank', 'noopener,noreferrer');
+              }
+            }}
+            role={link ? "link" : undefined}
+            aria-label={link ? `Open ${title} project link` : undefined}
+            data-testid={link ? `link-project-${index}` : undefined}
           >
             <ExternalLink className="h-8 w-8 text-primary-foreground" />
           </motion.div>

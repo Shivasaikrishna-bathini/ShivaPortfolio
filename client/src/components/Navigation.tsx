@@ -9,6 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+// TODO: Update your resume - Replace the PDF file in attached_assets folder with your latest resume
 import resumePdf from "@assets/Shivasai_Krishna_Resume.pdf";
 
 const navItems = [

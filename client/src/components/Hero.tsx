@@ -159,6 +159,7 @@ export default function Hero() {
           transition={{ delay: 1.2, duration: 0.5 }}
           className="flex gap-4 justify-center"
         >
+          {/* TODO: Update your GitHub link below */}
           <Button variant="ghost" size="icon" asChild data-testid="button-github">
             <a
               href="https://github.com/Shivasaikrishna-bathini"
@@ -168,6 +169,7 @@ export default function Hero() {
               <Github className="h-5 w-5" />
             </a>
           </Button>
+          {/* TODO: Update your LinkedIn link below */}
           <Button variant="ghost" size="icon" asChild data-testid="button-linkedin">
             <a
               href="https://www.linkedin.com/in/shiva-sai-krishna"

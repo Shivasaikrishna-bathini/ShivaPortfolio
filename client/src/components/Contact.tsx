@@ -17,12 +17,14 @@ const contactInfo = [
     value: "New York, US",
     href: null
   },
+  // TODO: Update your LinkedIn link and display name below
   {
     icon: Linkedin,
     label: "LinkedIn",
     value: "Shiva Sai Krishna",
     href: "https://www.linkedin.com/in/shiva-sai-krishna"
   },
+  // TODO: Update your GitHub link and username below
   {
     icon: Github,
     label: "GitHub",

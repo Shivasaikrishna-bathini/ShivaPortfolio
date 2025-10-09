@@ -3,6 +3,8 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import ProjectCard from "./ProjectCard";
 
+// TODO: Update your project cards - Edit title, duration, description, tags, and optionally add link property
+// Example with link: { title: "...", duration: "...", description: [...], tags: [...], link: "https://github.com/..." }
 const projects = [
   {
     title: "Personal Attorney – Legal RAG Assistant",
