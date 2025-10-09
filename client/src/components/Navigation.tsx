@@ -47,12 +47,9 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             data-testid="link-home"
           >
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center font-bold text-primary-foreground text-lg group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+            <div className="text-3xl font-bold italic bg-gradient-to-br from-primary via-accent to-primary bg-clip-text text-transparent hover:opacity-80 transition-opacity" style={{ fontFamily: "'Brush Script MT', cursive" }}>
               SK
             </div>
-            <span className="text-xl font-bold tracking-tight hidden md:block">
-              Shivasai Krishna
-            </span>
           </motion.a>
 
           <div className="hidden md:flex items-center gap-6">
