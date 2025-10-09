@@ -125,21 +125,10 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mb-6 relative"
-        >
-          <div className="text-[12rem] md:text-[20rem] font-bold leading-none tracking-tighter opacity-20 blur-sm select-none pointer-events-none">
-            SK
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-8xl md:text-9xl font-bold bg-gradient-to-br from-primary via-accent to-primary bg-clip-text text-transparent animate-pulse">
-              SK
-            </div>
-          </div>
-        </motion.div>
+        <AnimatedText
+          text="Shivasai Krishna Goud Bathini"
+          className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
+        />
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
