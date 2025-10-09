@@ -172,68 +172,68 @@ body {
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  --background: 227 37% 19%;
+  --background: 240 35% 8%;
 
-  --foreground: 324 100% 91%;
+  --foreground: 210 40% 90%;
 
-  --border: 231 26% 28%;
+  --border: 250 30% 20%;
 
-  --card: 227 37% 22%;
+  --card: 240 30% 12%;
 
-  --card-foreground: 324 100% 91%;
+  --card-foreground: 210 40% 90%;
 
-  --card-border: 231 26% 30%;
+  --card-border: 250 25% 18%;
 
-  --sidebar: 227 37% 21%;
+  --sidebar: 240 32% 10%;
 
-  --sidebar-foreground: 324 100% 91%;
+  --sidebar-foreground: 210 40% 90%;
 
-  --sidebar-border: 231 26% 28%;
+  --sidebar-border: 250 30% 20%;
 
-  --sidebar-primary: 268 20% 51%;
+  --sidebar-primary: 280 60% 60%;
 
-  --sidebar-primary-foreground: 227 37% 19%;
+  --sidebar-primary-foreground: 240 35% 8%;
 
-  --sidebar-accent: 231 26% 38%;
+  --sidebar-accent: 250 35% 25%;
 
-  --sidebar-accent-foreground: 324 100% 91%;
+  --sidebar-accent-foreground: 210 40% 90%;
 
-  --sidebar-ring: 268 20% 51%;
+  --sidebar-ring: 280 60% 60%;
 
-  --popover: 227 37% 22%;
+  --popover: 240 30% 12%;
 
-  --popover-foreground: 324 100% 91%;
+  --popover-foreground: 210 40% 90%;
 
-  --popover-border: 231 26% 30%;
+  --popover-border: 250 25% 18%;
 
-  --primary: 268 20% 51%;
+  --primary: 280 60% 60%;
 
-  --primary-foreground: 227 37% 19%;
+  --primary-foreground: 240 35% 8%;
 
-  --secondary: 231 26% 38%;
+  --secondary: 250 35% 25%;
 
-  --secondary-foreground: 324 100% 91%;
+  --secondary-foreground: 210 40% 90%;
 
-  --muted: 231 26% 32%;
+  --muted: 250 30% 22%;
 
-  --muted-foreground: 324 70% 75%;
+  --muted-foreground: 210 25% 65%;
 
-  --accent: 324 100% 85%;
+  --accent: 200 80% 70%;
 
-  --accent-foreground: 227 37% 19%;
+  --accent-foreground: 240 35% 8%;
 
   --destructive: 0 75% 35%;
 
-  --destructive-foreground: 324 100% 91%;
+  --destructive-foreground: 210 40% 90%;
 
   /* Used as the border around inputs. Dark mode: Should be a border that is light enough to have high contrast when rendered on a --card background. More contrast than standard --border */
-  --input: 231 26% 40%;
-  --ring: 268 20% 51%;
-  --chart-1: 268 20% 51%;
-  --chart-2: 324 100% 85%;
-  --chart-3: 231 26% 48%;
-  --chart-4: 324 70% 75%;
-  --chart-5: 268 30% 60%;
+  --input: 250 30% 35%;
+  --ring: 280 60% 60%;
+  --chart-1: 280 60% 60%;
+  --chart-2: 200 80% 70%;
+  --chart-3: 250 50% 50%;
+  --chart-4: 210 40% 75%;
+  --chart-5: 300 50% 65%;
 
   --shadow-2xs: 0px 2px 0px 0px hsl(0 0% 0% / 0.15);
   --shadow-xs: 0px 2px 0px 0px hsl(0 0% 0% / 0.20);
@@ -276,11 +276,11 @@ body {
 @layer base {
   * {
     @apply border-border;
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='%23F97A00' opacity='0.8'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23386641'/%3E%3C/svg%3E") 16 16, auto;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='%23A78BFA' opacity='0.8'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%2360A5FA'/%3E%3C/svg%3E") 16 16, auto;
   }
 
   a, button, [role="button"] {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23F97A00'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23FED16A'/%3E%3C/svg%3E") 16 16, pointer;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23A78BFA'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2360A5FA'/%3E%3C/svg%3E") 16 16, pointer;
   }
 
   body {
