@@ -21,6 +21,9 @@ export interface Project {
     label: string;
     value: string;
   }[];
+  // TODO: Add project links when available
+  websiteUrl?: string;  // Live demo or deployed website URL
+  githubUrl?: string;   // GitHub repository or source code URL
 }
 
 export const projects: Project[] = [

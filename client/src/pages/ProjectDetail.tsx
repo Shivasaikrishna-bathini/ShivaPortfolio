@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { useTheme } from "@/components/ThemeProvider";
 import { Moon, Sun } from "lucide-react";
+// import { ExternalLink, Github } from "lucide-react"; // TODO: Uncomment when adding project links
 import AnimatedProjectBackground from "@/components/AnimatedProjectBackground";
 
 export default function ProjectDetail() {
@@ -97,6 +98,37 @@ export default function ProjectDetail() {
               </Badge>
             ))}
           </div>
+
+          {/* TODO: Uncomment when project links are available */}
+          {/* Project Links - Website & GitHub */}
+          {/* {(project.websiteUrl || project.githubUrl) && (
+            <div className="flex gap-3 pt-6">
+              {project.websiteUrl && (
+                <Button
+                  variant="default"
+                  asChild
+                  data-testid="button-website"
+                >
+                  <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    View Live Demo
+                  </a>
+                </Button>
+              )}
+              {project.githubUrl && (
+                <Button
+                  variant="outline"
+                  asChild
+                  data-testid="button-github"
+                >
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Github className="h-4 w-4 mr-2" />
+                    View Source Code
+                  </a>
+                </Button>
+              )}
+            </div>
+          )} */}
         </motion.div>
       </div>
 

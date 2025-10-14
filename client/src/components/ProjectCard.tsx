@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+// import { ExternalLink, Github } from "lucide-react"; // TODO: Uncomment when adding project links
 import { Link } from "wouter";
 import { Project } from "@shared/projects";
 import AnimatedProjectBackground from "./AnimatedProjectBackground";
@@ -71,6 +72,43 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 </Badge>
               ))}
             </div>
+
+            {/* TODO: Uncomment when project links are available */}
+            {/* Project Links - Website & GitHub */}
+            {/* {(project.websiteUrl || project.githubUrl) && (
+              <div className="flex gap-2 mb-4">
+                {project.websiteUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1"
+                    asChild
+                    data-testid={`button-website-${index}`}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
+                {project.githubUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1"
+                    asChild
+                    data-testid={`button-github-${index}`}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="h-3.5 w-3.5 mr-1.5" />
+                      Source Code
+                    </a>
+                  </Button>
+                )}
+              </div>
+            )} */}
 
             {/* CTA Button with arrow animation */}
             <Button
