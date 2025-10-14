@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { useTheme } from "@/components/ThemeProvider";
 import { Moon, Sun } from "lucide-react";
+import AnimatedProjectBackground from "@/components/AnimatedProjectBackground";
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -62,13 +63,9 @@ export default function ProjectDetail() {
         </div>
       </motion.header>
 
-      {/* Hero Image with Gradient Overlay */}
+      {/* Hero with Animated Background and Gradient Overlay */}
       <div className="relative h-96 overflow-hidden">
-        <img
-          src={`/attached_assets/stock_images/${project.image}`}
-          alt={project.title}
-          className="w-full h-full object-cover"
-        />
+        <AnimatedProjectBackground category={project.category} />
         {/* Bottom gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
       </div>

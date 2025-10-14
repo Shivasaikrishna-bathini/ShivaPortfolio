@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { Project } from "@shared/projects";
+import AnimatedProjectBackground from "./AnimatedProjectBackground";
 
 interface ProjectCardProps {
   project: Project;
@@ -22,15 +23,16 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     >
       <Link href={`/project/${project.id}`}>
         <Card className="group overflow-hidden h-full hover-elevate active-elevate-2 cursor-pointer transition-all duration-300">
-          {/* Image with zoom effect */}
+          {/* Animated Background with zoom effect */}
           <div className="relative h-48 overflow-hidden">
-            <motion.img
-              src={`/attached_assets/stock_images/${project.image}`}
-              alt={project.title}
-              className="w-full h-full object-cover"
+            <motion.div
+              className="absolute inset-0"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-            />
+            >
+              <AnimatedProjectBackground category={project.category} />
+            </motion.div>
+            
             {/* Semi-transparent overlay */}
             <div className="absolute inset-0 bg-background/0 group-hover:bg-background/[0.03] group-active:bg-background/[0.08] transition-all duration-300" />
             

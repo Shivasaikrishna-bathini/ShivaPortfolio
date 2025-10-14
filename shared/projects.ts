@@ -5,7 +5,6 @@ export interface Project {
   category: string;
   duration: string;
   shortDescription: string;
-  image: string;
   tags: string[];
   problem: string;
   approach: string;
@@ -31,7 +30,6 @@ export const projects: Project[] = [
     category: "Research & AI",
     duration: "Apr 2023 – Mar 2024",
     shortDescription: "Advanced deep learning models for human-object interaction understanding, bridging gaps between synthetic and real-world cognition.",
-    image: "artificial_intellige_aa689f74.jpg",
     tags: ["Deep Learning", "Computer Vision", "DVRL", "PyTorch", "Research"],
     problem: "Human-object interaction models struggled with significant accuracy gaps between synthetic training data and real-world images, limiting practical deployment in cognitive AI systems.",
     approach: "Developed and fine-tuned deep learning models using Bongard-HOI and HAKE datasets. Integrated DVRL (Data Valuation using Reinforcement Learning), advanced attention mechanisms, and componential analysis. Engineered custom data augmentation pipelines and self-supervised representation learning to improve model generalization.",
@@ -76,7 +74,6 @@ export const projects: Project[] = [
     category: "GenAI & NLP",
     duration: "Apr 2024 – Nov 2024",
     shortDescription: "AI-powered legal assistance platform using RAG to deliver state-specific DMV and legal information with 98% accuracy.",
-    image: "legal_documents_law__164c0f8e.jpg",
     tags: ["RAG", "LangChain", "ChromaDB", "FastAPI", "DeepSeek", "AWS"],
     problem: "Immigrants and individuals navigating complex legal frameworks lack accessible, accurate, and affordable legal guidance, while traditional LLM retraining for legal updates is prohibitively expensive.",
     approach: "Designed a Retrieval-Augmented Generation (RAG) platform with ChromaDB vector database, LangChain orchestration, and DeepSeek 8B with LoRA fine-tuning. Deployed scalable REST APIs using FastAPI on AWS infrastructure with comprehensive MLOps CI/CD pipelines.",
@@ -122,7 +119,6 @@ export const projects: Project[] = [
     category: "Computer Vision",
     duration: "Jan 2025 – May 2025",
     shortDescription: "Advanced computer vision system for accurate pill identification and tracking in pharmacy workflows using YOLO and ResNet.",
-    image: "medical_pills_pharma_81caabf2.jpg",
     tags: ["YOLO", "Computer Vision", "PyTorch", "ResNet", "FastAPI", "AWS"],
     problem: "Pharmacy operations face accuracy challenges in pill identification, especially with overlapping pills, leading to potential medication errors and reduced operational efficiency.",
     approach: "Engineered a computer vision pipeline using YOLO (v5-v12) with multi-scale detection, ResNet backbone, attention modules, and advanced frame-to-frame tracking. Implemented containerized deployment with Docker, FastAPI, and AWS infrastructure.",
@@ -168,7 +164,6 @@ export const projects: Project[] = [
     category: "NLP & LLM",
     duration: "Jun 2025 – Aug 2025",
     shortDescription: "High-performance Transformer model for ancient Sanskrit texts with optimized CUDA/TensorRT inference achieving <75ms latency.",
-    image: "ancient_sanskrit_man_99c9fed9.jpg",
     tags: ["Transformers", "NLP", "CUDA", "TensorRT", "Sanskrit", "NVIDIA"],
     problem: "Ancient Sanskrit Vedic texts require specialized NLP models that can capture linguistic complexity while maintaining production-grade inference performance for real-time applications.",
     approach: "Built and trained a custom Transformer-based NLP model with 25,000-token vocabulary specifically designed for Sanskrit. Optimized using NVIDIA GPUs with CUDA, cuDNN, and TensorRT for kernel-level performance tuning and efficient attention mechanisms.",
@@ -214,7 +209,6 @@ export const projects: Project[] = [
     category: "ML & Forecasting",
     duration: "Sep 2025 – Running",
     shortDescription: "Advanced forecasting models for volatile financial markets using ARIMA, Prophet, and XGBoost with MLflow tracking.",
-    image: "stock_market_finance_312bbd34.jpg",
     tags: ["Time-Series", "ARIMA", "Prophet", "XGBoost", "MLflow", "Python"],
     problem: "Volatile financial markets require accurate forecasting models that can handle high-frequency data and market swings while providing reliable prediction intervals.",
     approach: "Built comprehensive forecasting solution comparing ARIMA/SARIMA, Meta Prophet, and XGBoost ensembles with engineered lag and window features. Implemented MLflow-tracked pipelines for experiment management and automated forecasting workflows.",
