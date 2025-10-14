@@ -28,8 +28,9 @@ Preferred communication style: Simple, everyday language.
 
 **Animation & Interactivity**
 - **Framer Motion** for declarative animations, scroll-triggered effects, and page transitions
-- **3D Perspective Cards**: Project cards feature mouse-tracking 3D tilt effects with dynamic rotateX/rotateY transforms
-- **Innovative Hover Animations**: Cards scale, show gradient overlays, sparkle effects with rotation, and staggered content reveals
+- **Animated Project Backgrounds**: Category-specific animations (Research & AI: neural networks, GenAI & NLP: flowing text, Computer Vision: detection grids, NLP & LLM: Sanskrit symbols, ML & Forecasting: chart patterns)
+- **Hover Effects**: Project cards feature zoom effects (scale 1.05), semi-transparent gradient overlays, and arrow animations
+- **SSR-Safe Animations**: Client-side particle generation in useEffect to prevent hydration mismatches
 - Custom cursor implementation with blend modes and hover states
 - Spark and glow particle animations across the page
 - Intersection Observer patterns (via Framer Motion's `useInView`) for scroll-based animations
@@ -83,7 +84,8 @@ Preferred communication style: Simple, everyday language.
 - Navigation component with scroll detection and mobile menu
 
 **Reusable Patterns**
-- ProjectCard component for consistent project display
+- ProjectCard component for consistent project display with animated backgrounds
+- AnimatedProjectBackground component with category-specific animations (neural networks, flowing text, detection grids, Sanskrit symbols, chart patterns)
 - AnimatedText component for staggered text animations
 - CustomCursor component for enhanced interactivity
 - Extensive shadcn/ui component library (40+ components)
