@@ -10,8 +10,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 // TODO: Update your resume - Replace the PDF file in attached_assets folder with your latest resume
-import resumePdf from "@assets/Shivasai_Krishna_Resume.pdf";
-
+//import resumePdf from "@assets/Shivasai_Krishna_Resume.pdf";
+//not using the above line since it is only frontend static 
 const navItems = [
   { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
@@ -154,7 +154,7 @@ export default function Navigation() {
                   data-testid="button-download-resume"
                 >
                   <a
-                    href={resumePdf}
+                    href="/attached_assets/Shivasai_Krishna_Resume.pdf"
                     download="Shivasai_Krishna_Resume.pdf"
                   >
                     <Download className="h-4 w-4 mr-2" />
@@ -165,7 +165,7 @@ export default function Navigation() {
             </DialogHeader>
             <div className="flex-1 overflow-hidden">
               <object
-                data={resumePdf}
+                data="/attached_assets/Shivasai_Krishna_Resume.pdf"
                 type="application/pdf"
                 className="w-full h-full"
                 title="Resume PDF"
@@ -175,7 +175,7 @@ export default function Navigation() {
                     <p className="mb-4">Your browser cannot display the PDF.</p>
                     <Button asChild data-testid="button-fallback-download-resume">
                       <a
-                        href={resumePdf}
+                        href="/attached_assets/Shivasai_Krishna_Resume.pdf"
                         download="Shivasai_Krishna_Resume.pdf"
                       >
                         <Download className="h-4 w-4 mr-2" />
