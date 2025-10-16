@@ -113,7 +113,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-24 sm:py-32 text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
