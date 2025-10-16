@@ -22,7 +22,7 @@ const contactInfo = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "Shiva Sai Krishna",
-    href: "https://www.linkedin.com/in/shiva-sai-krishna"
+    href: "www.linkedin.com/in/shiva-sai-bathini-728875284"
   },
   // TODO: Update your GitHub link and username below
   {
