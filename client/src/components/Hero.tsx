@@ -172,7 +172,7 @@ export default function Hero() {
           {/* TODO: Update your LinkedIn link below */}
           <Button variant="ghost" size="icon" asChild data-testid="button-linkedin">
             <a
-              href="www.linkedin.com/in/shiva-sai-bathini"
+              href="www.linkedin.com/in/shiva-sai-bathini/"
               target="_blank"
               rel="noopener noreferrer"
             >
