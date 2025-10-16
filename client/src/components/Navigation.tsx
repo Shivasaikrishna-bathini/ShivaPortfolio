@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu, X, FileText, Download } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { motion, AnimatePresence } from "framer-motion";
-import {
+import {z
   Dialog,
   DialogContent,
   DialogHeader,
