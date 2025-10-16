@@ -40,7 +40,6 @@ export default function Navigation() {
         isScrolled || mobileMenuOpen ? "bg-background/95 backdrop-blur-lg border-b border-border" : ""
       }`}
     >
-    >
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <motion.a
