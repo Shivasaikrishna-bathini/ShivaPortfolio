@@ -37,8 +37,9 @@ export default function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : ""
+        isScrolled || mobileMenuOpen ? "bg-background/95 backdrop-blur-lg border-b border-border" : ""
       }`}
+    >
     >
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -109,15 +110,16 @@ export default function Navigation() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden overflow-hidden"
+              className="md:hidden overflow-hidden bg-background/95"
             >
-              <div className="flex flex-col gap-4 pt-4 pb-2">
+              <div className="flex flex-col gap-4 pt-4 pb-4 border-t border-border/50 mt-4">
+                
                 {navItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-muted-foreground hover:text-foreground transition-colors py-2"
+                    className="text-muted-foreground hover:text-foreground transition-colors py-2 text-lg"
                     data-testid={`link-mobile-${item.name.toLowerCase()}`}
                   >
                     {item.name}
