@@ -127,14 +127,14 @@ export default function Hero() {
 
         <AnimatedText
           text="Shivasai Krishna Goud Bathini"
-          className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
+          className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight px-4 break-words"
         />
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12"
+          className="text-base sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 px-6 break-words"
         >
           3+ Years Building Production-Scale LLM Solutions
         </motion.p>
