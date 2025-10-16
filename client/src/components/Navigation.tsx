@@ -36,6 +36,7 @@ export default function Navigation() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || mobileMenuOpen ? "bg-background/95 backdrop-blur-lg border-b border-border" : ""
       }`}
@@ -112,7 +113,6 @@ export default function Navigation() {
               className="md:hidden overflow-hidden bg-background/95"
             >
               <div className="flex flex-col gap-4 pt-4 pb-4 border-t border-border/50 mt-4">
-                
                 {navItems.map((item) => (
                   <a
                     key={item.name}
@@ -155,7 +155,7 @@ export default function Navigation() {
                   data-testid="button-download-resume"
                 >
                   <a
-                    href="/attached_assets/Shivasai_Krishna_Resume.pdf"
+                    href={resumePdf}
                     download="Shivasai_Krishna_Resume.pdf"
                   >
                     <Download className="h-4 w-4 mr-2" />
@@ -166,7 +166,7 @@ export default function Navigation() {
             </DialogHeader>
             <div className="flex-1 overflow-hidden">
               <object
-                data="/attached_assets/Shivasai_Krishna_Resume.pdf"
+                data={resumePdf}
                 type="application/pdf"
                 className="w-full h-full"
                 title="Resume PDF"
@@ -176,7 +176,7 @@ export default function Navigation() {
                     <p className="mb-4">Your browser cannot display the PDF.</p>
                     <Button asChild data-testid="button-fallback-download-resume">
                       <a
-                        href="/attached_assets/Shivasai_Krishna_Resume.pdf"
+                        href={resumePdf}
                         download="Shivasai_Krishna_Resume.pdf"
                       >
                         <Download className="h-4 w-4 mr-2" />
