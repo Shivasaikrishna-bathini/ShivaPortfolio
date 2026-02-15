@@ -85,7 +85,7 @@ export default function Experience() {
               <Briefcase className="h-6 w-6 text-primary" />
               Professional Experience
             </motion.h3>
-
+            <div className="space-y-6">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
