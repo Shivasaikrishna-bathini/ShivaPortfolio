@@ -7,16 +7,29 @@ import { Briefcase, GraduationCap } from "lucide-react";
 const experiences = [
   {
     type: "work",
-    title: "Cloud Support Technician",
+    title: "Applied Research Engineer",
     organization: "University of Bridgeport",
     location: "Bridgeport, CT",
-    duration: "Jan 2024 – Present",
     description: [
-      "Resolved IT support tickets related to software, networking, and hardware issues for students and staff through a centralized service desk system",
-      "Managed and updated records in the cloud-connected student information system (Ellucian Colleague DB), supporting account provisioning, course registration, and data consistency checks",
-      "Troubleshot connectivity and authentication issues involving cloud storage platforms (Google Drive, OneDrive), VPN access, and virtual desktops",
+      "Designed and deployed a domain-specific Large Language Model (LLM) supporting academic, administrative, and student-facing services across the University’s internal ecosystem, serving 10K+ daily requests",
+      "Built and maintained an end-to-end MLOps and CI/CD pipeline using Kubeflow and Kubernetes, automating data ingestion, model training, validation, deployment, and retraining triggers on an on-prem HPC cluster (8× NVIDIA H200GPUs) and Azure ML based workflows",
+      "Designed GPU-aware workload orchestration and priority-based scheduling with Kubeflow Pipelines, balancing interactive inference workloads with background training and evaluation jobs to optimize GPU utilization.",
       "Collaborated with infrastructure and systems teams to escalate and resolve complex database, access control, and application deployment issues",
-      "Gained operational experience with ITSM tools and enterprise database platforms in a hybrid cloud environment"
+      "Built data engineering pipelines using Apache Spark (Databricks) for large-scale data preprocessing, transformation, and dataset versioning feeding downstream LLM training and inference pipelines"
+    ]
+  },
+//second experience
+  {
+    type: "work",
+    title: "Software Infrastructure Engineer – Platform & GTM Systems",
+    organization: "Vojoy Games Pvt. Ltd",
+    location: "Hyderabad, India",
+    description: [
+      "Built and maintained cloud-based platform services on AWS and Azure to support game backend systems, analytics workloads, and go-to-market (GTM) experimentation across multiple mobile game releases.",
+      "Developed data pipelines and backend services to collect, clean, and aggregate gameplay and marketing data, enabling statistical analysis of user acquisition, retention, and ad performance.",
+      "Lead experimentation and reporting workflows to support A/B testing of gameplay features and ad strategies, surfacing results to product and GTM teams through dashboards and scheduled reports.",
+      "Optimized infrastructure costs through environment standardization, autoscaling policies, and resource right-sizing,balancing performance needs with operational efficiency.",
+      "Designed CI/CD pipelines using Azure DevOps and GitHub Actions to automate build, test, and deployment workflows for game services, analytics jobs, and internal tooling, improving release reliability and reducing manual deployment overhead."
     ]
   }
 ];
