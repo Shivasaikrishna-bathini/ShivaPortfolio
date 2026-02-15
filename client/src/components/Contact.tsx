@@ -8,13 +8,13 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "shbathin@my.bridgeport.edu",
-    href: "mailto:shbathin@my.bridgeport.edu"
+    value: "mailtoshivasaikrishna@gmail.com",
+    href: "mailto:mailtoshivasaikrishna@gmail.com"
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "New York, US",
+    value: "United States",
     href: null
   },
   // TODO: Update your LinkedIn link and display name below
