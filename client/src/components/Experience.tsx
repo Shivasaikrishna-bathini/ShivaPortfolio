@@ -117,7 +117,11 @@ export default function Experience() {
               </motion.div>
             ))}
           </div>
+        </div>
 
+        </div>
+        
+          
           <div>
             <motion.h3
               initial={{ opacity: 0, x: -20 }}
