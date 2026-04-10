@@ -118,7 +118,6 @@ export default function Experience() {
             ))}
           </div>
         </div>
-          //CHANGES
           <div>
             <motion.h3
               initial={{ opacity: 0, x: -20 }}
@@ -162,7 +161,7 @@ export default function Experience() {
             </div>
           </div>
         </div>
-      
+       </div>
     </section>
   );
 }
