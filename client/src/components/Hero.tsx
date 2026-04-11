@@ -124,10 +124,12 @@ export default function Hero() {
             Generative AI Engineer
           </div>
         </motion.div>
-
+//here is where it should be pasted again 
         <AnimatedText
           text="Shivasai Krishna Goud Bathini"
-          className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight px-4 break-words"
+          className="text-[clamp(1rem,4vw,5rem)]
+    font-bold mb-6 tracking-tight px-4
+    whitespace-nowrap overflow-hidden"
         />
 
         <motion.p
