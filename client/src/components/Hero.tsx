@@ -123,8 +123,7 @@ export default function Hero() {
           <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-8">
             Generative AI Engineer
           </div>
-        </motion.div>
-//here is where it should be pasted again 
+        </motion.div> 
         <AnimatedText
           text="Shivasai Krishna Goud Bathini"
           className="text-[clamp(1rem,4vw,5rem)]
