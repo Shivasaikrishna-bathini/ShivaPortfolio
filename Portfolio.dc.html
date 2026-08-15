@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+<style>
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #05070f; }
+a { color: #ffaa47; text-decoration: none; }
+a:hover { color: #ff4f33; }
+::selection { background: #ffaa47; color: #05070f; }
+@keyframes blinkCaret { 0%, 45% { opacity: 1 } 50%, 95% { opacity: 0 } 100% { opacity: 1 } }
+@keyframes floatSlow { 0% { transform: translateY(0) } 50% { transform: translateY(-14px) } 100% { transform: translateY(0) } }
+</style>
+</helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#05070f"></rect><rect x="28" y="28" width="44" height="44" rx="9" fill="#ffaa47"></rect><text x="50" y="59" font-family="monospace" font-size="22" font-weight="700" text-anchor="middle" fill="#05070f">SB</text></svg></template>
+<div style="color: #fff6e1; font-family: 'Space Grotesk', sans-serif; min-height: 100vh; overflow-x: hidden; position: relative; background-color: #2F486D">
+
+  <div style="position: fixed; inset: 0; pointer-events: none; z-index: 0; background: radial-gradient(900px 600px at 78% 12%, rgba(112,172,160,0.14), transparent 70%), radial-gradient(700px 500px at 12% 55%, rgba(255,170,71,0.08), transparent 70%)"></div>
+
+  <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 40; display: flex; justify-content: flex-end; gap: 4px; padding: 22px 46px; backdrop-filter: blur(6px);">
+    <a href="#intro" data-lottie-nav="0" onMouseEnter="{{ navIn }}" onMouseLeave="{{ navOut }}" style="display: flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 8px; color: #fff6e1; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.62; font-weight: 600" style-hover="opacity: 1; background: rgba(255,246,225,0.05); color: #fff6e1;">
+      <span data-nav-box="0" style="width: 18px; height: 18px; display: block"></span>intro
+    </a>
+    <a href="#experience" data-lottie-nav="1" onMouseEnter="{{ navIn }}" onMouseLeave="{{ navOut }}" style="display: flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 8px; color: #fff6e1; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.62; font-weight: 600" style-hover="opacity: 1; background: rgba(255,246,225,0.05); color: #fff6e1;">
+      <span data-nav-box="1" style="width: 18px; height: 18px; display: block"></span>experience
+    </a>
+    <a href="#projects" data-lottie-nav="2" onMouseEnter="{{ navIn }}" onMouseLeave="{{ navOut }}" style="display: flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 8px; color: #fff6e1; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.62; font-weight: 600" style-hover="opacity: 1; background: rgba(255,246,225,0.05); color: #fff6e1;">
+      <span data-nav-box="2" style="width: 18px; height: 18px; display: block"></span>projects
+    </a>
+    <a href="#contact" data-lottie-nav="3" onMouseEnter="{{ navIn }}" onMouseLeave="{{ navOut }}" style="display: flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 8px; color: #fff6e1; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.62; font-weight: 600" style-hover="opacity: 1; background: rgba(255,246,225,0.05); color: #fff6e1;">
+      <span data-nav-box="3" style="width: 18px; height: 18px; display: block"></span>contact
+    </a>
+  </nav>
+
+  <section id="intro" data-screen-label="Intro" style="position: relative; z-index: 1; min-height: 100vh; display: grid; grid-template-columns: 1.05fr 0.95fr; align-items: center; gap: 40px; padding: 120px 80px 80px; max-width: 1500px; margin: 0 auto; box-sizing: border-box;">
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 26px;">
+      <div style="display: flex; align-items: baseline; gap: 14px; font-family: 'JetBrains Mono', monospace; font-size: clamp(19px, 1.9vw, 27px); letter-spacing: -0.01em;">
+        <span style="color: #70aca0; display: inline-flex; align-items: baseline;">
+          <span>{{ typed }}</span>
+          <span style="display: none; width: 2px; height: 1em; margin-left: 3px; background: #ffaa47; animation: blinkCaret 1.05s steps(1) infinite; transform: translateY(2px)"></span>
+        </span>
+        <span onMouseEnter="{{ cycleRole }}" style="color: #ffaa47; cursor: pointer; border-bottom: 1px dashed rgba(255,170,71,0.4); padding-bottom: 2px;" style-hover="color: #ff4f33; border-bottom: 1px dashed rgba(255,79,51,0.7);">Engineer</span>
+      </div>
+
+      <h1 style="margin: 0; font-size: clamp(46px, 6.4vw, 104px); line-height: 0.92; font-weight: 700; letter-spacing: -0.035em; color: #fff6e1; text-wrap: balance;">Shiva Sai<br>Bathini</h1>
+
+      
+
+      <p style="margin: 0; max-width: 30ch; font-size: clamp(16px, 1.25vw, 20px); line-height: 1.55; color: rgba(217,235,255,0.68); text-wrap: pretty; font-style: italic">Turning "I can't " into a pull request : )</p><div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 6px;">
+        <a href="{{ resumeUrl }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; background: #ffaa47; color: #05070f; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 6px 6px 0 #31756c; transform: translate(0,0);" style-hover="background: #ff4f33; color: #fff6e1; box-shadow: 2px 2px 0 #31756c; transform: translate(4px,4px);">Résumé<span style="font-size: 15px;">↗</span></a>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: rgba(217,235,255,0.4);">Brooklyn, NYC</span>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <div data-lottie-gamer="1" style="width: min(46vw, 560px); height: min(46vw, 560px); animation: floatSlow 7s ease-in-out infinite;"></div>
+    </div>
+  </section>
+
+  <section id="experience" data-screen-label="Experience" style="position: relative; z-index: 1; padding: 60px 80px 40px; max-width: 1400px; margin: 0 auto; box-sizing: border-box;">
+    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 54px;">
+      <span style="width: 34px; height: 2px; background: #ff4f33;"></span>
+      <h2 style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,246,225,0.75); font-weight: 500;">Experience</h2>
+    </div>
+
+    <div style="position: relative; display: grid; grid-template-rows: repeat(4, 250px);">
+      <svg viewBox="0 0 400 1400" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible;">
+        <path d="M200,0 C380,175 380,175 200,350 C20,525 20,525 200,700 C380,875 380,875 200,1050 C20,1225 20,1225 200,1400" fill="none" stroke="#31756c" stroke-width="3.5" stroke-opacity="0.55" vector-effect="non-scaling-stroke"></path>
+      </svg>
+      <div style="position: absolute; left: 83.75%; top: 12.5%; width: 13px; height: 13px; margin: -6.5px 0 0 -6.5px; border-radius: 50%; background: #ffaa47; box-shadow: 0 0 0 5px rgba(255,170,71,0.16);"></div>
+      <div style="position: absolute; left: 16.25%; top: 37.5%; width: 13px; height: 13px; margin: -6.5px 0 0 -6.5px; border-radius: 50%; box-shadow: 0 0 0 5px rgba(112,172,160,0.16); background-color: #EBB711"></div>
+      <div style="position: absolute; left: 83.75%; top: 62.5%; width: 13px; height: 13px; margin: -6.5px 0 0 -6.5px; border-radius: 50%; background: #ff4f33; box-shadow: 0 0 0 5px rgba(255,79,51,0.16);"></div>
+      <div style="position: absolute; left: 16.25%; top: 87.5%; width: 13px; height: 13px; margin: -6.5px 0 0 -6.5px; border-radius: 50%; box-shadow: 0 0 0 5px rgba(112,172,160,0.16); background-color: #DEDD0E"></div>
+
+      <div style="position: relative; display: flex; justify-content: flex-start; align-items: center; padding-right: 58%;">
+        <div style="display: flex; flex-direction: column; gap: 10px; text-align: right; align-items: flex-end;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #ffaa47;">JAN 2026 — PRESENT</span>
+          <h3 style="margin: 0; font-size: 25px; font-weight: 600; letter-spacing: -0.02em; color: #fff6e1;">AI/ML Engineer</h3>
+          <span style="font-size: 15px; color: rgba(217,235,255,0.62);">Tata Consultancy Services · USA</span>
+          <p style="margin: 4px 0 0; max-width: 42ch; font-size: 14.5px; line-height: 1.6; color: rgba(217,235,255,0.55); text-wrap: pretty;">Production LLM support assistant for a financial services client — LangChain/LangGraph routing, hybrid dense + BM25 RAG with re-ranking, and a release-gating evaluation loop for groundedness and refusal behavior.</p>
+        </div>
+      </div>
+
+      <div style="position: relative; display: flex; justify-content: flex-end; align-items: center; padding-left: 58%;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #70aca0;">SEP 2023 — DEC 2025</span>
+          <h3 style="margin: 0; font-size: 25px; font-weight: 600; letter-spacing: -0.02em; color: #fff6e1;">Graduate Research Assistant — Applied AI</h3>
+          <span style="font-size: 15px; color: rgba(217,235,255,0.62);">University of Bridgeport · CT</span>
+          <p style="margin: 4px 0 0; max-width: 42ch; font-size: 14.5px; line-height: 1.6; color: rgba(217,235,255,0.55); text-wrap: pretty;">Built "Purple Knights," a multi-agent campus assistant for 3,000+ students over 10K+ documents, deployed on an 8× NVIDIA H200 cluster with SLURM and MIG partitioning. Co-authored an ECAI-2025 paper on transformer-gated Mixture-of-Experts forecasting.</p>
+        </div>
+      </div>
+
+      <div style="position: relative; display: flex; justify-content: flex-start; align-items: center; padding-right: 58%;">
+        <div style="display: flex; flex-direction: column; gap: 10px; text-align: right; align-items: flex-end;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #ff4f33;">AUG 2022 — JUL 2023</span>
+          <h3 style="margin: 0; font-size: 25px; font-weight: 600; letter-spacing: -0.02em; color: #fff6e1;">Software Engineer (Full-Stack)</h3>
+          <span style="font-size: 15px; color: rgba(217,235,255,0.62);">Vojoy Games · Hyderabad, India</span>
+          <p style="margin: 4px 0 0; max-width: 42ch; font-size: 14.5px; line-height: 1.6; color: rgba(217,235,255,0.55); text-wrap: pretty;">Shipped features across 5+ live mobile game titles in React Native and Redux, architected GraphQL and REST APIs on AWS for real-time gameplay data, and cut deployment time ~60% with Azure DevOps and GitHub Actions pipelines.</p>
+        </div>
+      </div>
+
+      <div style="position: relative; display: flex; justify-content: flex-end; align-items: center; padding-left: 58%;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #70aca0;">MAY 2021 — JUL 2022</span>
+          <h3 style="margin: 0; font-size: 25px; font-weight: 600; letter-spacing: -0.02em; color: #fff6e1;">Software Engineering Intern</h3>
+          <span style="font-size: 15px; color: rgba(217,235,255,0.62);">Vojoy Games · Hyderabad, India</span>
+          <p style="margin: 4px 0 0; max-width: 42ch; font-size: 14.5px; line-height: 1.6; color: rgba(217,235,255,0.55); text-wrap: pretty;">Backend services in Node.js and ASP.NET for live titles, and an A/B testing framework that pulled experiment cycles from two weeks down to a few days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" data-screen-label="Projects" style="position: relative; z-index: 1; padding: 90px 80px 40px; max-width: 1400px; margin: 0 auto; box-sizing: border-box;">
+    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 26px;">
+      <span style="width: 34px; height: 2px; background: #ffaa47;"></span>
+      <h2 style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,246,225,0.75); font-weight: 500;">Projects</h2>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: rgba(217,235,255,0.32);">hover to pull a card</span>
+    </div>
+
+    <div style="position: relative; height: 520px; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 30px;">
+      <div style="position: absolute; bottom: 30px; left: 50%; width: clamp(216px, 22vw, 300px); height: 400px; box-sizing: border-box; padding: 26px; border-radius: 14px; border: 1px solid rgba(112,172,160,0.35); box-shadow: 0 22px 50px rgba(0,0,0,0.55); transform: translateX(-50%) translate(clamp(-330px, -24vw, -196px), 34px) rotate(-11deg); transform-origin: bottom center; transition: transform 0.42s cubic-bezier(.2,.8,.25,1), border-color 0.3s; display: flex; flex-direction: column; gap: 14px; background-color: #2C6362" style-hover="transform: translateX(-50%) translate(clamp(-330px, -24vw, -196px), -26px) rotate(0deg) scale(1.05); border-color: #ffaa47; z-index: 10;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; color: #ffaa47;">01</span>
+        <h3 style="margin: 0; font-size: 24px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #FFF6E1">Legal Buddy</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.55; color: rgba(217,235,255,0.6); text-wrap: pretty;">AI legal navigator for international students. Full-stack RAG app with Google OAuth 2.0, JWT sessions and a dual-client Supabase architecture under row-level security.</p>
+        <div style="margin-top: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: rgba(112,172,160,0.9);">FastAPI · React/TS · pgvector<br>Ollama · Docker</div>
+      </div>
+
+      <div style="position: absolute; bottom: 30px; left: 50%; width: clamp(216px, 22vw, 300px); height: 400px; box-sizing: border-box; padding: 26px; border-radius: 14px; border: 1px solid rgba(112,172,160,0.35); box-shadow: 0 22px 50px rgba(0,0,0,0.55); transform: translateX(-50%) translate(clamp(-110px, -8vw, -66px), 10px) rotate(-3.6deg); transform-origin: bottom center; transition: transform 0.42s cubic-bezier(.2,.8,.25,1), border-color 0.3s; display: flex; flex-direction: column; gap: 14px; background-color: #FFAA47" style-hover="transform: translateX(-50%) translate(clamp(-110px, -8vw, -66px), -40px) rotate(0deg) scale(1.05); border-color: #ffaa47; z-index: 10;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; color: #ffaa47;">02</span>
+        <h3 style="margin: 0; font-size: 24px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #fff6e1;">Mixture-of-Experts Forecasting</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.55; color: rgba(217,235,255,0.6); text-wrap: pretty;">Transformer-gated MoE combining linear, transformer, xLSTM and minGRU experts; outperformed single-architecture baselines across benchmark datasets. ECAI 2025.</p>
+        <div style="margin-top: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: rgba(112,172,160,0.9);">Python · PyTorch<br>Transformers · xLSTM</div>
+      </div>
+
+      <div style="position: absolute; bottom: 30px; left: 50%; width: clamp(216px, 22vw, 300px); height: 400px; box-sizing: border-box; padding: 26px; border-radius: 14px; border: 1px solid rgba(112,172,160,0.35); box-shadow: 0 22px 50px rgba(0,0,0,0.55); transform: translateX(-50%) translate(clamp(66px, 8vw, 110px), 10px) rotate(3.6deg); transform-origin: bottom center; transition: transform 0.42s cubic-bezier(.2,.8,.25,1), border-color 0.3s; display: flex; flex-direction: column; gap: 14px; background-color: #31756C" style-hover="transform: translateX(-50%) translate(clamp(66px, 8vw, 110px), -40px) rotate(0deg) scale(1.05); border-color: #ffaa47; z-index: 10;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; color: #ffaa47;">03</span>
+        <h3 style="margin: 0; font-size: 24px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #fff6e1;">Rig Vedha Sanskrit Transformer</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.55; color: rgba(217,235,255,0.6); text-wrap: pretty;">Transformer trained on Sanskrit Vedic text with a custom 29K-token vocabulary built for the language's morphology, where standard subword tokenizers fragment compounds.</p>
+        <div style="margin-top: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: rgba(112,172,160,0.9);">Python · PyTorch<br>HF Tokenizers</div>
+      </div>
+
+      <div style="position: absolute; bottom: 30px; left: 50%; width: clamp(216px, 22vw, 300px); height: 400px; box-sizing: border-box; padding: 26px; border-radius: 14px; border: 1px solid rgba(112,172,160,0.35); box-shadow: 0 22px 50px rgba(0,0,0,0.55); transform: translateX(-50%) translate(clamp(196px, 24vw, 330px), 34px) rotate(11deg); transform-origin: bottom center; transition: transform 0.42s cubic-bezier(.2,.8,.25,1), border-color 0.3s; display: flex; flex-direction: column; gap: 14px; background-color: #FFAA47" style-hover="transform: translateX(-50%) translate(clamp(196px, 24vw, 330px), -26px) rotate(0deg) scale(1.05); border-color: #ffaa47; z-index: 10;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; color: #ffaa47;">04</span>
+        <h3 style="margin: 0; font-size: 24px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #fff6e1;">Stock Buddy</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.55; color: rgba(217,235,255,0.6); text-wrap: pretty;">Full-stack trading platform integrating Yahoo Finance and NASDAQ feeds, sustaining reliable transaction throughput under concurrent load.</p>
+        <div style="margin-top: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; color: rgba(112,172,160,0.9); font-weight: 800">Java · Spring · React<br>AWS · GraphQL</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-screen-label="Contact" style="position: relative; z-index: 1; padding: 40px 80px 90px; max-width: 1400px; margin: 0 auto; box-sizing: border-box;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 48px; flex-wrap: wrap; padding: 34px 40px; border-radius: 18px; border: 1px solid rgba(112,172,160,0.22); background: rgba(11,18,32,0.55);">
+      <div style="display: flex; align-items: center; gap: 22px;">
+        <div data-lottie-contact="1" style="width: 96px; height: 96px; flex: none;"></div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <h2 style="margin: 0; font-size: 27px; font-weight: 600; letter-spacing: -0.02em; color: #fff6e1;">Locate Me ... !!!!</h2>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: rgba(217,235,255,0.45);">Brooklyn, NYC — open to AI/ML roles</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <a href="mailto:shivasaikrishna@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 10px; background: #ffaa47; color: #05070f; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 5px 5px 0 #31756c; transform: translate(0,0); transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.2s;" style-hover="background: #ff4f33; color: #fff6e1; box-shadow: 1px 1px 0 #31756c; transform: translate(4px,4px);">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1.6" y="4" width="16.8" height="12" rx="2"></rect><path d="M2.4 5.2 10 11l7.6-5.8"></path></svg>Email
+        </a>
+        <a href="https://github.com/Shivasaikrishna-bathini" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 10px; background: #70aca0; color: #05070f; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 5px 5px 0 #31756c; transform: translate(0,0); transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.2s;" style-hover="background: #ff4f33; color: #fff6e1; box-shadow: 1px 1px 0 #31756c; transform: translate(4px,4px);">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 15.5 3 10l4.5-5.5"></path><path d="M12.5 4.5 17 10l-4.5 5.5"></path></svg>GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/shiva-sai-bathini/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 10px; background: #d9ebff; color: #05070f; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 5px 5px 0 #31756c; transform: translate(0,0); transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.2s;" style-hover="background: #ff4f33; color: #fff6e1; box-shadow: 1px 1px 0 #31756c; transform: translate(4px,4px);">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8.5v7"></path><circle cx="4" cy="4.8" r="1.3" fill="currentColor" stroke="none"></circle><path d="M9 15.5v-7M9 11c0-1.6 1.2-2.8 2.8-2.8S15 9.4 15 11v4.5"></path></svg>LinkedIn
+        </a>
+      </div>
+    </div>
+    <div style="margin-top: 28px; display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: rgba(217,235,255,0.28);">
+      
+      <span>© 2026 Shiva Sai Bathini</span>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;resumeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.dropbox.com/scl/fi/jxf1taobshqc3zmnsgv0b/Shiva-Resume.pdf?rlkey=aw67ayqcfzhl231yv2mrmgjw3&amp;st=beipqvvx&amp;dl=1&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;roleWords&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;AI/ML, Software, Cloud&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
+class Component extends DCLogic {
+  state = { typed: "", i: 0 };
+
+  get words() {
+    const raw = this.props.roleWords;
+    const list = (raw || "").split(",").map((s) => s.trim()).filter(Boolean);
+    return list.length ? list : ["AI/ML", "Software", "Cloud"];
+  }
+
+  componentDidMount() {
+    this.alive = true;
+    this.busy = true;
+    this.t = setTimeout(() => this.type(), 500);
+    this.navAnims = [];
+    this.waitLottie();
+  }
+
+  componentWillUnmount() {
+    this.alive = false;
+    clearTimeout(this.t);
+  }
+
+  waitLottie(tries = 0) {
+    if (!this.alive) return;
+    if (window.lottie) return this.initLottie();
+    if (tries > 120) return;
+    setTimeout(() => this.waitLottie(tries + 1), 100);
+  }
+
+  initLottie() {
+    const root = this.hostEl || document;
+    const mk = (el, path, opts) =>
+      window.lottie.loadAnimation(Object.assign({
+        container: el, renderer: "svg", loop: true, autoplay: true, path
+      }, opts || {}));
+
+    const gamer = document.querySelector('[data-lottie-gamer]');
+    if (gamer && !gamer.dataset.done) { gamer.dataset.done = "1"; mk(gamer, "gamer.json"); }
+
+    const contact = document.querySelector('[data-lottie-contact]');
+    if (contact && !contact.dataset.done) { contact.dataset.done = "1"; mk(contact, "contact-anim.json"); }
+
+    document.querySelectorAll('[data-nav-box]').forEach((el) => {
+      if (el.dataset.done) return;
+      el.dataset.done = "1";
+      const a = mk(el, "boxes-lights.json", { loop: true, autoplay: false });
+      a.addEventListener("DOMLoaded", () => a.goToAndStop(0, true));
+      this.navAnims[el.getAttribute("data-nav-box")] = a;
+    });
+  }
+
+  type() {
+    if (!this.alive) return;
+    const w = this.words[this.state.i];
+    if (this.state.typed.length < w.length) {
+      this.setState((s) => ({ typed: w.slice(0, s.typed.length + 1) }));
+      this.t = setTimeout(() => this.type(), 135);
+    } else {
+      this.busy = false;
+    }
+  }
+
+  erase() {
+    if (!this.alive) return;
+    if (this.state.typed.length > 0) {
+      this.setState((s) => ({ typed: s.typed.slice(0, -1) }));
+      this.t = setTimeout(() => this.erase(), 70);
+    } else {
+      this.setState((s) => ({ i: (s.i + 1) % this.words.length }));
+      this.t = setTimeout(() => this.type(), 260);
+    }
+  }
+
+  renderVals() {
+    return {
+      typed: this.state.typed,
+      resumeUrl: this.props.resumeUrl ?? "https://www.dropbox.com/scl/fi/jxf1taobshqc3zmnsgv0b/Shiva-Resume.pdf?rlkey=aw67ayqcfzhl231yv2mrmgjw3&st=beipqvvx&dl=1",
+      cycleRole: () => {
+        if (this.busy) return;
+        this.busy = true;
+        clearTimeout(this.t);
+        this.erase();
+      },
+      navIn: (e) => {
+        const i = e.currentTarget.getAttribute("data-lottie-nav");
+        const a = this.navAnims && this.navAnims[i];
+        if (a) { a.goToAndStop(0, true); a.play(); }
+      },
+      navOut: (e) => {
+        const i = e.currentTarget.getAttribute("data-lottie-nav");
+        const a = this.navAnims && this.navAnims[i];
+        if (a) { a.stop(); a.goToAndStop(0, true); }
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
